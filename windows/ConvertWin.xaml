@@ -1,0 +1,51 @@
+﻿<Controls:MetroWindow x:Class="FileToText_WPF.windows.ConvertWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FileToText_WPF.windows"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:Dialog="clr-namespace:MahApps.Metro.Controls.Dialogs;assembly=MahApps.Metro"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen" 
+        GlowBrush="Blue"
+        Title="ConvertWin" Height="250" Width="400" Loaded="MetroWindow_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition  ></RowDefinition>
+            <RowDefinition   ></RowDefinition>
+            <RowDefinition  ></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        
+        <StackPanel Grid.Row="0" Grid.RowSpan="3" Margin="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                
+                </Grid.RowDefinitions>
+            </Grid>
+             
+           
+            <Button FontFamily="Vazir" Margin="2" Click="selectFileBtn_Click"  Name="selectFileBtn">Select Your File(s)</Button>
+            <Label>Language:</Label>
+            <ComboBox Name="listCountryNameCombo"></ComboBox>
+            <GroupBox>
+                <GroupBox.Header>
+                    <Label>Type of File</Label>
+                </GroupBox.Header>
+                <DockPanel>
+                    <RadioButton Click="pdfFileRadio_Click" Name="pdfFileRadio">PDF</RadioButton>
+                    <RadioButton Click="imgFileRadio_Click" Name="imgFileRadio">IMG</RadioButton>
+                </DockPanel>
+                
+            </GroupBox>
+            <Button FontFamily="Vazir" Margin="2" Click="convertFileBtn_Click"   Name="convertFileBtn">Convert</Button>
+            <Controls:MetroProgressBar  Width="250" Name="lodingProgress"
+                      Margin="4"
+                      IsIndeterminate="False" FlowDirection="LeftToRight"/>
+        </StackPanel>
+    </Grid>
+</Controls:MetroWindow>
