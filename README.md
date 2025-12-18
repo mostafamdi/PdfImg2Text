@@ -1,19 +1,18 @@
 ## Prerequisites
 
-This application has **two main prerequisites**:
+This application requires the following dependencies to be installed before use:
 
 ### 1. ImageMagick
-You must download and install **ImageMagick** on your system.  
-It is recommended to install the **64-bit version**.
+ImageMagick must be installed on your system.
 
-Official download page:
-https://imagemagick.org/script/download.php
+- Recommended: 64-bit version
+- Official download page:  
+  https://imagemagick.org/script/download.php
 
 ---
 
 ### 2. Tesseract OCR
-You need to download and install **Tesseract OCR** along with the required language files. the language files have *.traineddata, you can download those from below link:
-[download link of languages files:](https://github.com/tesseract-ocr/tessdata)
+Tesseract OCR is required for text recognition.
 
 #### Download Tesseract OCR:
 https://sourceforge.net/projects/tesseract-ocr.mirror/
@@ -21,7 +20,17 @@ https://sourceforge.net/projects/tesseract-ocr.mirror/
 #### Download language files:
 https://github.com/tesseract-ocr/tessdata
 
-Language files have the extension: *.trainddata
-when you download those, you should copy them into tessdata folder where you install Tesseract program.
+- Language files have the `.traineddata` extension.
+- After downloading, copy the required language files into the `tessdata` directory inside your Tesseract installation path.
 
-Finally you install PDF-IMG2Txt App, then you should copy dir of Tesseract App to this program at setting section.
+---
+
+## Final Setup
+
+1. Install **ImageMagick**
+2. Install **Tesseract OCR**
+3. Copy the required `.traineddata` language files into the `tessdata` folder
+4. Install **PDF-IMG2Txt**
+5. In the application settings, set the **Tesseract installation directory path**
+
+After completing these steps, the application will be ready to use.
